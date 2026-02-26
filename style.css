@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    transition: background 0.8s ease;
+}
+
+.container {
+    max-width: 600px;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.message {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Page 1 - Neutral */
+.neutral {
+    background: #f5f5f5;
+    color: #333;
+}
+
+.neutral button {
+    background: #888;
+    color: white;
+}
+
+.neutral button:hover {
+    background: #555;
+}
+
+/* Page 2 - Romantic Blue */
+.romantic {
+    background: linear-gradient(to right, #89f7fe, #66a6ff);
+    color: white;
+}
+
+.romantic button {
+    background: white;
+    color: #66a6ff;
+}
+
+.romantic button:hover {
+    background: #e0f0ff;
+}
+
+/* Page 3 - Final Red */
+.final {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+}
+
+.hearts {
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+/* Floating Hearts Animation */
+.heart-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.heart-container span {
+    position: absolute;
+    bottom: -50px;
+    font-size: 24px;
+    animation: floatUp 8s linear infinite;
+    opacity: 0.8;
+}
+
+/* Random horizontal positions */
+.heart-container span:nth-child(1) { left: 10%; animation-duration: 7s; }
+.heart-container span:nth-child(2) { left: 25%; animation-duration: 9s; }
+.heart-container span:nth-child(3) { left: 40%; animation-duration: 6s; }
+.heart-container span:nth-child(4) { left: 55%; animation-duration: 8s; }
+.heart-container span:nth-child(5) { left: 70%; animation-duration: 10s; }
+.heart-container span:nth-child(6) { left: 85%; animation-duration: 7s; }
+.heart-container span:nth-child(7) { left: 50%; animation-duration: 9s; }
+.heart-container span:nth-child(8) { left: 30%; animation-duration: 6s; }
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
